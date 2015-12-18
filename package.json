@@ -1,11 +1,10 @@
 {
-  "name": "antibase-sass",
+  "name": "antibase-css",
   "version": "0.0.1",
-  "description": "sass boilerplate set",
+  "description": "anti css(sass) boilerplate set",
   "main": "",
-  "repository": "https://github.com/muyuu/base-sass",
+  "repository": "https://github.com/muyuu/antibase-css",
   "author": "muyuu",
-  "homepage": "http://anticyb.org/",
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
