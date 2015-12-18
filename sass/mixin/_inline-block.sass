@@ -1,0 +1,9 @@
+=inline-block
+  display: inline-block
+  @if $support-ie6 or $support-ie7
+    *display: inline
+    *zoom: 1
+
+%inline-block
+    +inline-block
+

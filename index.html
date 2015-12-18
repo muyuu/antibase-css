@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>anti base</title>
+    <meta name="description" content="this site is anti base at top page">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="antibase.css">
+  </head>
+  <body>
+    <div class="l-page">
+      <div id="pageHeader" class="l-pageHeader">
+        <div class="container">
+          <div class="box">
+            <h1>page title</h1>
+            <p>html boilerplate base.</p>
+          </div>
+        </div>
+      </div>
+      <div class="l-pageContent">
+        <div class="container">
+          <div class="box">
+            <div class="row">
+              <div class="col3">
+                <h2>dropdown</h2>
+              </div>
+              <div class="col9">
+                <div class="dropDown">
+                  <div class="dropDown__select">
+                    <select name="drop">
+                      <option value="list1">リスト1</option>
+                      <option value="list2">リスト2</option>
+                      <option value="list3">リスト3</option>
+                      <option value="list4">リスト4</option>
+                      <option value="list5">リスト5</option>
+                      <option value="list6">リスト6</option>
+                      <option value="list7">リスト7</option>
+                      <option value="list8">リスト8</option>
+                      <option value="list9">リスト9</option>
+                      <option value="list10">リスト10</option>
+                    </select>
+                  </div>
+                  <div class="dropDown__body">
+                    <ul class="dropDown__list"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="box">
+            <div class="row">
+              <div class="col3">
+                <h2>tab</h2>
+              </div>
+              <div class="col9">
+                <div class="tab js-tab">
+                  <ul class="tab__head js-tab__head">
+                    <li class="tab__item js-tab__item"><a href="#install" class="js-noAnchor">インストール</a></li>
+                    <li class="tab__item js-tab__item"><a href="#howtouse" class="js-noAnchor">使い方</a></li>
+                    <li class="tab__item js-tab__item"><a href="#option" class="js-noAnchor">オプション</a></li>
+                  </ul>
+                  <ul class="tabBody js-tab__body">
+                    <li id="install" class="tab__content js-tab__content">
+                      <p>htmlにタブを書く</p>
+                      <pre><code>&lt;div class="tab"&gt;
+&lt;ul class="tab__head"&gt;
+&lt;li class="tab__item"&gt;タブ1&lt;/li&gt;
+&lt;li class="tab__item"&gt;タブ2&lt;/li&gt;
+&lt;li class="tab__item"&gt;タブ3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="tab__body"&gt;
+&lt;li class="tab__content"&gt;中身ですよ、中身。文句あっか&lt;/li&gt;
+&lt;li class="tab__content"&gt;中身ですよ、中身。文句あっか&lt;/li&gt;
+&lt;li class="tab__content"&gt;中身ですよ、中身。文句あっか&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                      <p>css はお好みで。</p>
+                      <p>jQueryを読み込む</p>
+                      <p>Underscore.jsを読み込む</p>
+                      <pre><code>&lt;script src="//code.jquery.com/jquery-1.10.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"&gt;&lt;/script&gt;</code></pre>
+                      <p>tabn.jsを読み込む</p>
+                      <pre><code>&lt;script src='/tab.js'&gt;&lt;/script&gt;</code></pre>
+                      <p>準備は以上になります！</p>
+                    </li>
+                    <li id="howtouse" class="tab__content js-tab__content">
+                      <p>タブとタブのコンテンツをラップした要素をセレクターに指定</p>
+                      <pre><code>app.tab.set({".tab"});</code></pre>
+                      <p>アクティブタブとコンテンツには .is-current が付与される</p>
+                      <p>タブはデフォルトはセレクタ内の .tab__item 。</p>
+                      <p>タブをラップする要素はデフォルトはセレクタ内の .tab 。変更したい場合はオプションを付与。</p>
+                    </li>
+                    <li id="option" class="tab__content js-tab__content">
+                      <table class="table">
+                        <tr>
+                          <th class="table__th">root</th>
+                          <td class="table__td">タブの要素（デフォルトは .js-tab ）</td>
+                        </tr>
+                        <tr>
+                          <th class="table__th">tab</th>
+                          <td class="table__td">タブのラッパー（デフォルトは .js-tab__head ）</td>
+                        </tr>
+                        <tr>
+                          <th class="table__th">item</th>
+                          <td class="table__td">タブ（デフォルトは .js-tab__item ）</td>
+                        </tr>
+                        <tr>
+                          <th class="table__th">body</th>
+                          <td class="table__td">タブの中身のラッパー（デフォルトは js-tab__body ）</td>
+                        </tr>
+                        <tr>
+                          <th class="table__th">content</th>
+                          <td class="table__td">タブの中身（デフォルトは .js-tab__content ）.js-tab__content</td>
+                        </tr>
+                        <tr>
+                          <th class="table__th">currentClass</th>
+                          <td class="table__td">カレントなタブとコンテンツに付与されるクラス（デフォルトは is-current ）</td>
+                        </tr>
+                      </table>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="row">
+              <div class="col3">
+                <h2>accordion</h2>
+              </div>
+              <div class="col9">
+                <div class="accordion js-acd">
+                  <div class="accordion__head js-acd__head">heading01</div>
+                  <div class="accordion__body js-acd__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae similitudo in genere etiam humano apparet. Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Quodsi ipsam honestatem undique pertectam atque absolutam. Et ille ridens: Video, inquit, quid agas; Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit? Duo Reges: constructio interrete. Ea possunt paria non esse.</p>
+                  </div>
+                  <div class="accordion__head js-acd__head">heading02</div>
+                  <div class="accordion__body js-acd__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae similitudo in genere etiam humano apparet. Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Quodsi ipsam honestatem undique pertectam atque absolutam. Et ille ridens: Video, inquit, quid agas; Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit? Duo Reges: constructio interrete. Ea possunt paria non esse.</p>
+                  </div>
+                  <div class="accordion__head js-acd__head">heading03</div>
+                  <div class="accordion__body js-acd__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae similitudo in genere etiam humano apparet. Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Quodsi ipsam honestatem undique pertectam atque absolutam. Et ille ridens: Video, inquit, quid agas; Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit? Duo Reges: constructio interrete. Ea possunt paria non esse.</p>
+                  </div>
+                </div>
+                <div class="accordion js-acd">
+                  <div class="accordion__head js-acd__head">heading01</div>
+                  <div class="accordion__body js-acd__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae similitudo in genere etiam humano apparet. Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Quodsi ipsam honestatem undique pertectam atque absolutam. Et ille ridens: Video, inquit, quid agas; Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit? Duo Reges: constructio interrete. Ea possunt paria non esse.</p>
+                  </div>
+                  <div class="accordion__head js-acd__head">heading02</div>
+                  <div class="accordion__body js-acd__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae similitudo in genere etiam humano apparet. Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Quodsi ipsam honestatem undique pertectam atque absolutam. Et ille ridens: Video, inquit, quid agas; Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit? Duo Reges: constructio interrete. Ea possunt paria non esse.</p>
+                  </div>
+                  <div class="accordion__head js-acd__head">heading03</div>
+                  <div class="accordion__body js-acd__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae similitudo in genere etiam humano apparet. Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Quodsi ipsam honestatem undique pertectam atque absolutam. Et ille ridens: Video, inquit, quid agas; Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit? Duo Reges: constructio interrete. Ea possunt paria non esse.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="row">
+              <div class="col3">
+                <h2>adjust height</h2>
+              </div>
+              <div class="col9">
+                <ul class="bang lists row">
+                  <li class="bang__item list col6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus, beatum esse numquam probabis; Multa sunt dicta ab antiquis de contemnendis ac despiciendis rebus humanis; Iam id ipsum absurdum, maximum malum neglegi. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Huius, Lyco, oratione locuples, rebus ipsis ielunior.</p>
+                  </li>
+                  <li class="bang__item list col6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus,</p>
+                  </li>
+                </ul>
+                <ul class="bang lists row">
+                  <li class="bang__item list col5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus, beatum esse numquam probabis; Multa sunt dicta ab antiquis de contemnendis ac despiciendis rebus humanis; Iam id ipsum absurdum, maximum malum neglegi. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Huius, Lyco, oratione locuples, rebus ipsis ielunior.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus, beatum esse numquam probabis; Multa sunt dicta ab antiquis de contemnendis ac despiciendis rebus humanis; Iam id ipsum absurdum, maximum malum neglegi. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Huius, Lyco, oratione locuples, rebus ipsis ielunior.</p>
+                  </li>
+                  <li class="bang__item list col4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus, beatum esse numquam probabis; Multa sunt dicta ab antiquis de contemnendis ac despiciendis rebus humanis; Iam id ipsum absurdum, maximum malum neglegi. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Huius, Lyco, oratione locuples, rebus ipsis ielunior.</p>
+                  </li>
+                  <li class="bang__item list col3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus, beatum esse numquam probabis; Multa sunt dicta ab antiquis de contemnendis ac despiciendis rebus humanis; Iam id ipsum absurdum, maximum malum neglegi. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. Huius, Lyco, oratione locuples, rebus ipsis ielunior.</p>
+                  </li>
+                </ul>
+                <ul class="bang lists row">
+                  <li class="bang__item list col6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus,</p>
+                  </li>
+                  <li class="bang__item list col6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus,</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus,</p>
+                  </li>
+                  <li class="bang__item list col6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus,</p>
+                  </li>
+                  <li class="bang__item list col6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui ita affectus,</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="row">
+              <div class="col3">
+                <h2>modal</h2>
+              </div>
+              <div class="col9">
+                <p>modal</p>
+                <p><a href="/modal.html" class="js-modal">open modal</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-pageFooter">
+        <div class="container">
+          <p class="u-align--center">&copy; muyuu</p>
+        </div>
+      </div>
+      <div class="l-goToTop"><a href="#pageHeader" class="goToTop__link"><i class="fa fa-hand-o-up fa-4x"></i></a></div>
+    </div>
+  </body>
+</html>

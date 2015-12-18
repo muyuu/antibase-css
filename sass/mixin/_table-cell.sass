@@ -1,0 +1,9 @@
+=table-cell
+    display: table-cell
+    @if $support-ie6 or $support-ie7
+        *display: inline
+        *zoom: 1
+
+%table-cell
+    +table-cell
+

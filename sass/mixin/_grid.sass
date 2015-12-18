@@ -1,0 +1,10 @@
+=grid ($span)
+  $tmpwd: ($column-width * $span) + ($gutter-width * ($span - 1))
+
+  @if $support-responsive
+    width: percentage($tmpwd / $content-width)
+    margin-left: percentage($gutter-width / $content-width)
+  @else
+    width: $tmpwd
+    margin-left: $gutter-width
+
