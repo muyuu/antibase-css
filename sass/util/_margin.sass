@@ -1,25 +1,33 @@
-
-// Helper
-//
-// html helper class
-//
-// Markup: - <p class="tar">テキストを右寄せにします</p>
-//
-// Styleguide 3
 .u
 
   &-mg
+    $list: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100
+
     &t
-      @each $qt in 0, 10, 20, 30, 40
+      @each $qt in $list
         &--#{$qt}
           margin-top: $qt + px
     &b
-      @each $qt in 0, 10, 20, 30, 40
+      @each $qt in $list
         &--#{$qt}
           margin-bottom: $qt + px
     &v
-      @each $qt in 0, 10, 20, 30, 40
+      @each $qt in $list
         &--#{$qt}
           margin-top: $qt + px
           margin-bottom: $qt + px
 
+    &l
+      @each $qt in $list
+        &--#{$qt}
+          margin-left: $qt + px
+    &r
+      @each $qt in $list
+        &--#{$qt}
+          margin-right: $qt + px
+
+    &h
+      @each $qt in $list
+        &--#{$qt}
+          margin-left: $qt + px
+          margin-right: $qt + px
