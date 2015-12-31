@@ -1,10 +1,15 @@
-=grid ($span)
-  $tmpwd: ($column-width * $span) + ($gutter-width * ($span - 1))
+=row($no-padding: false, $gutter: $gutter-width)
+    +clrfx
+    width: 100%
+    @if $no-padding
+        padding-left: $gutter
+        padding-right: $gutter
 
-  @if $support-responsive
-    width: percentage($tmpwd / $content-width)
-    margin-left: percentage($gutter-width / $content-width)
-  @else
-    width: $tmpwd
-    margin-left: $gutter-width
+
+=col ($span, $gutter: $gutter-width)
+    display: block
+    float: left
+    width: percentage(100 / 12 * $span / 100)
+    padding-left: $gutter / 2
+    padding-right: $gutter / 2
 
