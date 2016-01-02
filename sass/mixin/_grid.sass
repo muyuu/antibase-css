@@ -1,15 +1,29 @@
 =row($no-padding: false, $gutter: $gutter-width)
     +clrfx
     width: 100%
+
+    $calc-gutter: - $gutter / 2
     @if $no-padding
-        padding-left: $gutter
-        padding-right: $gutter
+        $calc-gutter: 0
+
+    margin-left: $calc-gutter
+    margin-right: $calc-gutter
+
+    +smartphone
+        margin-left: 0
+        margin-right: 0
 
 
 =col ($span, $gutter: $gutter-width)
+    box-sizing: border-box
     display: block
     float: left
     width: percentage(100 / 12 * $span / 100)
     padding-left: $gutter / 2
     padding-right: $gutter / 2
+
+    +smartphone
+        width: 100%
+        padding-left: 0
+        padding-right: 0
 

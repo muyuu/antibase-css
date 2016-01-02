@@ -22,7 +22,7 @@ g.task "connect", ->
         livereload: true
 
     options =
-        url: "http://localhost:3000"
+        url: "http://localhost:#{port}"
         app: "Google Chrome"
 
     g.src "#{d.root}index.html"

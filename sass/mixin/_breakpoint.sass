@@ -1,14 +1,13 @@
 
 // responsive mixin
-=rowBreak
-  @media (max-width: #{$rowBreak-width - 1px})
-    @content
+=break($width)
+    @media (max-width: #{$width})
+        @content
 
 =tablet
-  @media (max-width: #{$desktop-width - 1px})
-    @content
+    +break(#{$desktop-width - 1px})
+        @content
 
 =smartphone
-  @media (max-width: #{$sp-width})
-    @content
-
+    +break(#{$sp-width - 1px})
+        @content
