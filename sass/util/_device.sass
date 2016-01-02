@@ -1,24 +1,34 @@
 .u
-    &-is
+    &-only
         &--pc
             +tablet
                 display: none !important
 
         &--sp
             display: none !important
-
-            +tablet
+            +smartphone
                 display: inherit !important
 
 
-    &--inner
-        &-tablet
+    &-not
+        &--pc
+            display: none !important
+            +tablet
+                display: inherit !important
+
+        &--sp
+            +smartphone
+                display: none !important
+
+
+    &-inner
+        &--tablet
             +tablet
                 margin:
                     left: 10px
                     right: 10px
 
-        &-sp
+        &--sp
             +smartphone
                 margin:
                     left: 10px
