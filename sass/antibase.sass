@@ -9,8 +9,10 @@
 @import "conf/setting"
 @import "conf/easing"
 
-//@import "conf/normalize"
-@import "conf/reset"
+@if $reset_type == "reset"
+    @import "conf/reset"
+@else
+    @import "conf/normalize"
 
 
 // ----------------------------------
