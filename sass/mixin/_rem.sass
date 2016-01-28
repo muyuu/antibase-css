@@ -1,4 +1,5 @@
 =rem ($pixel: 16, $base: $baseFontSizeNum )
-  @if $support-ie8
-    font-size: $pixel + px
-  font-size: ( $pixel / $base ) * 1rem
+    @if $support-ie8
+        font-size: $pixel + px
+
+    font-size: ( $pixel / $base ) * 1rem

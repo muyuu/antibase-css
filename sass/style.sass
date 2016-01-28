@@ -1,0 +1,23 @@
+@charset "utf-8"
+
+@import "_antibase"
+
+.twoCol
+    +twoCol
+
+    &__fluid
+        +twoColFluid
+
+    &__fixed
+        +twoColFixed
+
+        &--right
+            +twoColFixedRight
+
+
+.row
+    +row
+
+    @for $i from 1 through 12
+        > .col#{$i}
+            +col($i)
