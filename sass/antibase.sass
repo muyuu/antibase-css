@@ -1,3 +1,65 @@
-@charset "utf-8"
+// ----------------------------------
+// initial
+// ----------------------------------
+@import "conf/setting"
+@import "conf/browser"
+@import "conf/grid"
+@import "conf/margin"
+@import "conf/color-palette"
+@import "conf/site-color"
+@import "conf/font"
+@import "conf/easing"
 
-@import "_antibase"
+@if $reset_type == "reset"
+    @import "conf/reset"
+@else
+    @import "conf/normalize"
+
+
+
+// ----------------------------------
+// mixins
+// ----------------------------------
+@import "mixin/absorb"
+@import "mixin/breakpoint"
+@import "mixin/clearfix"
+@import "mixin/grid"
+@import "mixin/inline-block"
+@import "mixin/linkListArrow"
+@import "mixin/opacity"
+@import "mixin/rem"
+@import "mixin/replaceImg"
+@import "mixin/table-cell"
+@import "mixin/twoCol"
+
+
+
+// ----------------------------------
+// base element
+// ----------------------------------
+@import "base/root"
+@import "base/inline"
+@import "base/block"
+@import "base/heading"
+@import "base/list"
+@import "base/form"
+
+
+
+// ----------------------------------
+// utility class
+// ----------------------------------
+@import "util/align"
+@import "util/device"
+@import "util/margin"
+@import "util/txt"
+
+
+
+// ----------------------------------
+// layout layout
+// ----------------------------------
+@import "layout/grid"
+@import "layout/wrap"
+@import "layout/container"
+@import "layout/twoCol"
