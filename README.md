@@ -1,4 +1,4 @@
-# antibase-css v0.1.0
+# antibase-css v0.1.1
 
 This module is web frontend sass library
 
@@ -171,7 +171,7 @@ npm install --save-dev antibase-css
 - =rem($fontsize, $base: $baseFontSizeNum)
 - =linkListArrow($size: 10px, $right: 10px, $border-size: 2px, $color: #333)
 
-# replace images
+## replace images
 - =replaceImg($url, $width, $height, $sp: 0)
 - =replaceImgHover($url, $width, $height, $sp: 0)
 

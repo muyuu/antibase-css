@@ -1,11 +1,21 @@
 {
   "name": "antibase-css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "anti css(sass) boilerplate set",
   "main": "",
   "repository": "https://github.com/muyuu/antibase-css",
   "author": "muyuu",
-  "license": "MIT",
+  "files": [
+    "README.md",
+    "antibase.css",
+    "antibase.css.map",
+    "index.html",
+    "sass"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "http://muyuu.mit-license.org/"
+  },
   "scripts": {
     "dev": "gulp",
     "pkg": "gulp pkg"
